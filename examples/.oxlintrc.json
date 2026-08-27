@@ -1,0 +1,198 @@
+{
+  "$schema": "../node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "off",
+    "nursery": "off",
+    "pedantic": "off",
+    "perf": "off",
+    "restriction": "off",
+    "style": "off",
+    "suspicious": "off"
+  },
+  "jsPlugins": [
+    "../dist/index.js"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "design/coupling-between-objects.ts"
+      ],
+      "rules": {
+        "mess-detector/coupling-between-objects": [
+          "error",
+          {
+            "maximum": 3
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "codesize/cyclomatic-complexity.ts"
+      ],
+      "rules": {
+        "mess-detector/cyclomatic-complexity": [
+          "error",
+          {
+            "reportLevel": 3
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "codesize/npath-complexity.ts"
+      ],
+      "rules": {
+        "mess-detector/npath-complexity": [
+          "error",
+          {
+            "minimum": 4
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "codesize/long-method.ts"
+      ],
+      "rules": {
+        "mess-detector/long-method": [
+          "error",
+          {
+            "minimum": 5
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "codesize/long-class.ts"
+      ],
+      "rules": {
+        "mess-detector/long-class": [
+          "error",
+          {
+            "minimum": 5
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "codesize/long-parameter-list.ts"
+      ],
+      "rules": {
+        "mess-detector/long-parameter-list": [
+          "error",
+          {
+            "minimum": 3
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "codesize/excessive-public-count.ts"
+      ],
+      "rules": {
+        "mess-detector/excessive-public-count": [
+          "error",
+          {
+            "minimum": 2
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "codesize/too-many-fields.ts"
+      ],
+      "rules": {
+        "mess-detector/too-many-fields": [
+          "error",
+          {
+            "maxfields": 2
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "codesize/too-many-methods.ts"
+      ],
+      "rules": {
+        "mess-detector/too-many-methods": [
+          "error",
+          {
+            "maxmethods": 1
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "codesize/too-many-public-methods.ts"
+      ],
+      "rules": {
+        "mess-detector/too-many-public-methods": [
+          "error",
+          {
+            "maxmethods": 1
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "codesize/excessive-class-complexity.ts"
+      ],
+      "rules": {
+        "mess-detector/excessive-class-complexity": [
+          "error",
+          {
+            "maximum": 3
+          }
+        ]
+      }
+    }
+  ],
+  "rules": {
+    "mess-detector/boolean-argument-flag": "error",
+    "mess-detector/boolean-get-method-name": "error",
+    "mess-detector/camelcase-class-name": "error",
+    "mess-detector/camelcase-method-name": "error",
+    "mess-detector/camelcase-namespace": "error",
+    "mess-detector/camelcase-parameter-name": "error",
+    "mess-detector/camelcase-property-name": "error",
+    "mess-detector/camelcase-variable-name": "error",
+    "mess-detector/constant-naming-conventions": "error",
+    "mess-detector/count-in-loop-expression": "error",
+    "mess-detector/coupling-between-objects": "error",
+    "mess-detector/cyclomatic-complexity": "error",
+    "mess-detector/development-code-fragment": "error",
+    "mess-detector/duplicated-array-key": "error",
+    "mess-detector/else-expression": "error",
+    "mess-detector/empty-catch-block": "error",
+    "mess-detector/eval-expression": "error",
+    "mess-detector/excessive-class-complexity": "error",
+    "mess-detector/excessive-public-count": "error",
+    "mess-detector/exit-expression": "error",
+    "mess-detector/if-statement-assignment": "error",
+    "mess-detector/long-class": "error",
+    "mess-detector/long-class-name": "error",
+    "mess-detector/long-method": "error",
+    "mess-detector/long-parameter-list": "error",
+    "mess-detector/long-variable": "error",
+    "mess-detector/npath-complexity": "error",
+    "mess-detector/short-class-name": "error",
+    "mess-detector/short-method-name": "error",
+    "mess-detector/short-variable": "error",
+    "mess-detector/static-access": "error",
+    "mess-detector/too-many-fields": "error",
+    "mess-detector/too-many-methods": "error",
+    "mess-detector/too-many-public-methods": "error",
+    "mess-detector/unused-private-field": "error",
+    "mess-detector/unused-private-method": "error"
+  }
+}

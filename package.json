@@ -1,0 +1,53 @@
+{
+  "bugs": {
+    "url": "https://github.com/tobeycodes/typescript-mess-detector/issues"
+  },
+  "dependencies": {
+    "@oxlint/plugins": "^1.80.0"
+  },
+  "description": "PHPMD rules ported to TypeScript/JavaScript as an oxlint plugin",
+  "devDependencies": {
+    "oxfmt": "^0.65.0",
+    "oxlint": "^1.80.0",
+    "oxlint-tsgolint": "^7.0.2001",
+    "tsup": "^8.5.1",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
+  },
+  "engines": {
+    "node": ">=24.20.0"
+  },
+  "exports": {
+    ".": {
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/tobeycodes/typescript-mess-detector#readme",
+  "imports": {
+    "#rules/*": "./src/rules/*",
+    "#test/*": "./test/*",
+    "#utils/*": "./src/utils/*"
+  },
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "name": "mess-detector",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobeycodes/typescript-mess-detector.git"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --clean",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint": "oxlint --disable-nested-config",
+    "lint:fix": "oxlint --fix --disable-nested-config",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "type": "module",
+  "version": "0.0.0"
+}
