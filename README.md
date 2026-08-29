@@ -1,5 +1,8 @@
 # TypeScript Mess Detector
 
+[![npm version](https://img.shields.io/npm/v/mess-detector)](https://www.npmjs.com/package/mess-detector)
+[![npm license](https://img.shields.io/npm/l/mess-detector)](https://www.npmjs.com/package/mess-detector)
+
 This project ports [PHPMD](https://phpmd.org/) (PHP Mess Detector) rules to
 TypeScript and JavaScript. It runs as an [oxlint](https://oxc.rs/) plugin. If you have
 used PHPMD, you will recognize the rules. Examples include cyclomatic complexity,
